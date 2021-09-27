@@ -2,8 +2,25 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentKickOff">
 
+    <fragment
+        android:id="@+id/fragmentKickOff"
+        android:name="com.example.pruebakavak.presentacion.kickoff.view.KickOffFragment"
+        android:label="KickOffFragment"
+        tools:layout="@layout/fragment_kick_off">
+
+
+        <action
+            android:id="@+id/action_fragment_kick_off_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.example.pruebakavak.presentacion.booklist.view.BookListFragment"
+        android:label="BookListFragment"
+        tools:layout="@layout/fragment_book_list"/>
 
 
 </navigation>

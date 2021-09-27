@@ -53,7 +53,7 @@ dependencies {
     /**DataBinding*/
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
-    kapt "androidx.databinding:databinding-compiler:7.0.1"
+    kapt "androidx.databinding:databinding-compiler:7.0.2"
 
     /**Retrofit*/
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

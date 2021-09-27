@@ -6,7 +6,10 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14447463768115942" />
         <entry key="app/src/main/res/layout/fragment_book_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_book_list_adapter.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_kick_off.xml" value="0.14" />
         <entry key="app/src/main/res/layout/item_book_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_kick_off.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/item_types_of_books.xml" value="0.353979975127125" />
       </map>
     </option>
   </component>

@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.pruebakavak.R
+import com.example.pruebakavak.databinding.FragmentBookListBinding
 
-class FragmentBookList: Fragment() {
+class BookListFragment: Fragment() {
 
-    private var fragmentBookListAdapBinding : FragmentBookListAdapBinding ? = null
+    private var fragmentBookListBinding : FragmentBookListBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,13 +26,13 @@ class FragmentBookList: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        fragmentBookListAdapBinding = DataBindingUtil.inflate(
+        fragmentBookListBinding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_book_list_adapter,
+            R.layout.fragment_book_list,
             container,
             false
         )
-        return fragmentBookListAdapBinding?.root
+        return fragmentBookListBinding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

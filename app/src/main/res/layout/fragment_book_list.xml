@@ -1,156 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="bookListViewModel"
-            type="com.example.pruebakavak.presentacion.kickoff.kickOffFragment" />
-
+            type="com.example.pruebakavak.presentacion.booklist.viewModel.BookListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBookList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="vertical">
-
-          <Space
-              android:layout_width="match_parent"
-              android:layout_height="50dp"/>
-
-          <com.google.android.material.textfield.TextInputLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
-
-          <com.google.android.material.textview.MaterialTextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Book Store"
-              android:textAlignment="center"
-              android:textColor="@color/black"
-              android:textSize="30dp"
-              android:inputType="text"
-              android:textStyle="bold"/>
-
-              <androidx.appcompat.widget.AppCompatImageView
-                  android:id="@+id/bestSelersLisImageView"
-                  android:layout_width="105dp"
-                  android:layout_height="90dp"
-                  android:layout_margin="8dp"
-                  android:layout_marginStart="20dp"
-                  android:layout_marginTop="10dp"
-                  android:layout_marginBottom="8dp"
-                  android:src="@drawable/ic_launcher_background"
-                  app:layout_constraintBottom_toBottomOf="parent"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toTopOf="parent" />
-
-              <com.google.android.material.textview.MaterialTextView
-                  android:id="@+id/txtbestSelers"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginStart="25dp"
-                  android:layout_marginTop="8dp"
-                  app:layout_constraintStart_toEndOf="@+id/bookLisImageView"
-                  app:layout_constraintTop_toTopOf="parent"
-                  tools:text="Best Seler" />
-
-              <androidx.appcompat.widget.AppCompatImageView
-                  android:id="@+id/HistoryImageView"
-                  android:layout_width="105dp"
-                  android:layout_height="90dp"
-                  android:layout_margin="8dp"
-                  android:layout_marginStart="20dp"
-                  android:layout_marginTop="20dp"
-                  android:layout_marginBottom="8dp"
-                  android:src="@drawable/ic_launcher_background"
-                  app:layout_constraintBottom_toBottomOf="parent"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toTopOf="parent" />
-
-              <com.google.android.material.textview.MaterialTextView
-                  android:id="@+id/txtHistory"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginStart="25dp"
-                  android:layout_marginTop="10dp"
-                  app:layout_constraintStart_toEndOf="@+id/bookLisImageView"
-                  app:layout_constraintTop_toTopOf="parent"
-                  tools:text="History" />
-
-              <androidx.appcompat.widget.AppCompatImageView
-                  android:id="@+id/ScienceImageView"
-                  android:layout_width="105dp"
-                  android:layout_height="90dp"
-                  android:layout_margin="8dp"
-                  android:layout_marginStart="20dp"
-                  android:layout_marginTop="20dp"
-                  android:layout_marginBottom="8dp"
-                  android:src="@drawable/ic_launcher_background"
-                  app:layout_constraintBottom_toBottomOf="parent"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toTopOf="parent" />
-
-              <com.google.android.material.textview.MaterialTextView
-                  android:id="@+id/txtScience"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginStart="25dp"
-                  android:layout_marginTop="10dp"
-                  app:layout_constraintStart_toEndOf="@+id/bookLisImageView"
-                  app:layout_constraintTop_toTopOf="parent"
-                  tools:text="Sience" />
-
-              <androidx.appcompat.widget.AppCompatImageView
-                  android:id="@+id/BusinessImageView"
-                  android:layout_width="105dp"
-                  android:layout_height="90dp"
-                  android:layout_margin="8dp"
-                  android:layout_marginStart="20dp"
-                  android:layout_marginTop="20dp"
-                  android:layout_marginBottom="8dp"
-                  android:src="@drawable/ic_launcher_background"
-                  app:layout_constraintBottom_toBottomOf="parent"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toTopOf="parent" />
-
-              <com.google.android.material.textview.MaterialTextView
-                  android:id="@+id/txtBussines"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginStart="25dp"
-                  android:layout_marginTop="10dp"
-                  app:layout_constraintStart_toEndOf="@+id/bookLisImageView"
-                  app:layout_constraintTop_toTopOf="parent"
-                  tools:text="Bussines" />
-
-              <androidx.constraintlayout.widget.ConstraintLayout
-                  android:id="@+id/constraintLayout"
-                  android:layout_width="match_parent"
-                  android:layout_height="1dp"
-                  android:background="@color/grey"
-                  app:layout_constraintBottom_toBottomOf="parent" />
-
-          </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_kick_off"/>
 
 
-
-      </LinearLayout>
-
-        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
